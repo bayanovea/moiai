@@ -1,0 +1,54 @@
+/* Общее */
+.clear{
+  clear: both;
+}
+
+/* Блок конверсий */
+.box-conversion{
+	border: 1px solid rgb(200, 191, 191);
+	border-radius: 4px;
+	padding: 2px 20px 12px 23px;
+	width: 305px;
+	box-shadow: 0px 0px 5px rgb(200, 191, 191);
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.box-conversion h3{
+	margin-top: 0px;
+}
+.box-conversion label{
+	width: 80px;
+	float: left;
+}
+.box-conversion input{
+	display: block;
+}
+.box-conversion .box-conversion-send{
+	width: 274px;
+}
+
+/* Главная */
+.catalog-row > div > img{
+  float: left;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+.price{
+  font-size: 16px;
+}
+#small_basket{
+  width: 220px;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+#small_basket .small_basket_link{
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+.basket-img{
+  float: left;
+  margin-right: 10px;
+}

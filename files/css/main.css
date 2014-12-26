@@ -1,0 +1,481 @@
+/* Общие */
+.clear{
+  clear: both;
+}
+.container{
+  min-width: 760px;
+  margin-bottom: 40px;
+}
+
+/* Навигационное верхнее меню */
+.main_navbar{
+	margin-top: 15px;
+}
+
+/* Расшифровка id-корзины */ 
+.decryption-basket-id{
+	width: 300px;
+}
+.decryption{
+	padding: 10px;
+	width: 292px;
+	min-height: 100px;
+	border: 1px solid #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.do-decryption{
+	margin-bottom: 10px;
+}
+
+/* Таблица добавления новых ключевых слов */
+.new-words-table{
+	margin-top: 50px;
+}
+.new-words-table input{
+	width: 175px;
+	margin-bottom: 0px;
+}
+.new-words-table .priority{
+	width: 70px;
+	text-align: center;
+}
+.new-words-table .reject-new-word{
+	width: 89px;
+}
+
+/* Графики */
+.graphicLeft{
+  width: 300px;
+  float: left;
+  height: 200px;
+  margin-top: 50px;
+}
+.graphicLeft .legend{
+  position: relative;
+  top: -50px;
+  left: 20px;
+}
+.graphicRight{
+  width: 650px;
+  float: right;
+  height: 100%;
+}
+.graphicPlaceholder, .graphicPlaceholderRight {
+  width: 100%;
+  height: 100%;
+}
+.graphicPlaceholderRight{
+  width: 550px;
+  float: left;
+}
+.choices{
+  width: 100px;
+  float: right;
+  margin-top: 7px;
+}
+.choices input{
+  float: left;
+  margin-right: 5px;
+}
+.choices label{
+  font-size: 10px;
+}
+.graphic-block{
+  border-radius: 6px;
+  border: 1px solid rgb(214, 214, 214);
+  box-shadow: 0px 0px 7px rgb(214,214,214);
+  margin-top: 15px;
+  width: 100%;
+}
+.graphic-block select{
+  display: none;
+  width: 120px;
+  position: relative;
+  top: -239px;
+  left: 10px;
+}
+.graphic-block-header{
+  height: 35px;
+  background: rgb(237, 237, 237);
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: 2px solid rgb(214, 214, 214);
+}
+.graphic-block-head{
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+.graphic-block-body{
+  padding: 10px;
+  height: 300px;
+}
+.icon-chevron{
+  cursor: pointer;
+  float: right;
+  position: relative;
+  top: -31px;
+  right: 8px;
+  border-radius: 999px;
+  border: 2px solid rgba(200, 190, 190, 0.86);
+  padding: 3px;
+  box-shadow: 0px 0px 5px rgba(178, 178, 178, 0.76);
+}
+.icon-chevron-down{
+  background-position: -310px -116px !important;
+}
+.icon-chevron-up{
+  background-position: -284px -118px !important;
+}
+.graphic-type{
+  position: relative;
+  top: -245px;
+  left: 10px;
+}
+.graphics-date{
+  width: 550px;
+  float: right;
+}
+.graphics-date > div{
+  float: left;
+  margin-left: 30px;
+}
+.graphics-h1{
+  width: 500px;
+  float: left;
+}
+.graphics-date img{
+  float: right;
+  margin-top: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+  height: 30px;
+}
+
+/* Выбор страницы на главной */
+.variant-choice > div{
+ 	float: left;
+ 	margin-left: 20px;
+ 	margin-right: 20px;
+}
+.variant-choice h3{
+  	margin-bottom: 20px;
+}
+.variant-choice a{
+  	text-align: center;
+  	display: block;
+}
+.variant-choice img{
+  	margin-bottom: 10px;
+	border: 1px solid rgb(226, 222, 222);
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 0px 0px 6px rgb(226, 222, 222);
+}
+.variant-choice img:hover{
+	box-shadow: 0px 0px 6px rgb(138, 133, 133);
+}
+
+/* Форма логина */
+.sign-in-body{
+	background-color: #f5f5f5;
+}
+.form-signin {
+    max-width: 325px;
+    padding: 19px 29px 29px;
+    margin: 40px auto 40px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading, .form-signin .checkbox {
+    margin-bottom: 20px;
+}.form-signin input[type="text"],.form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+.form-signin .alert-error{
+    display: none;
+}
+.form-signin #sign-in-button{
+	width: 100%;
+}
+
+/* Отчёты */
+.table.orderGoals, .table.otherGoalsTable{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.table.orderGoals th, .table.otherGoalsTable th{
+  font-size: 12px;
+  font-weight: bold;
+  background: rgba(231, 231, 231, 0.4);
+  border-bottom: 2px solid #B3AEAE;
+  border-top: 2px solid #B3AEAE;
+  background-image: url('../images/bg.gif');
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+  padding-right: 18px;
+  border-left: 1px dashed #B3AEAE;
+  border-right: 1px dashed #B3AEAE;
+}
+.table.orderGoals th.headerSortUp, .table.otherGoalsTable th.headerSortUp {
+  background-color: rgba(223, 226, 228, 0.72);
+  background-image: url('../images/desc.gif');
+}
+.table.orderGoals th.headerSortDown, .table.otherGoalsTable th.headerSortDown{
+  background-color: rgba(223, 226, 228, 0.72);
+  background-image: url('../images/asc.gif');
+}
+.open-order{
+  cursor: pointer;
+  margin-right: 5px;
+}
+.order-composition{
+  display: none;
+}
+.order-composition ul{
+  list-style: none;
+  margin-left: 35px;
+}
+.general-summ{
+  position: relative;
+  top: 1px
+}
+.product-item{
+  border-bottom: 1px solid rgb(212, 206, 206);
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.product-item-first{
+  border-top: 1px solid rgb(212, 206, 206);
+  margin-top: 10px;
+}
+.product-item-last{
+  margin-bottom: 10px;
+}
+.product-item p{
+  margin-bottom: 0px;
+}
+.filters{
+  margin-bottom: 30px;
+}
+.filter-block-head{
+  font-weight: bold;
+}
+.filter-block{
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;  
+  width: 250px;
+}
+.filter-block-date label, .filter-block-price label{
+  width: 30px;
+  float: left;
+  margin-top: 5px;
+}
+.filter-block-first{
+  margin-left: 0px !important;
+}
+.filter-block-last{
+  margin-right: 0px !important;
+}
+.filter-apply{
+  margin-top: 10px;
+}
+#ui-datepicker-div{
+  font-size: 11px !important;
+}
+.ui-datepicker-month{
+  height: 17px;
+  position: relative;
+  top: -2px;
+  left: -12px;
+  font-size: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.report-container, .settings-container{
+  width: 96%;
+  margin-left: 2%;
+}
+.graphic-container{
+  min-width: 1171px;
+}
+
+.pagination-page{
+  float: left;
+  width: 35px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid rgb(170, 170, 170);
+  margin-right: 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #0088cc;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px rgb(178, 171, 171);
+  font-size: 17px;
+  padding-top: 1px;
+}
+.pagination-page-active{
+  cursor: default;
+  color: gray;
+}
+.pagination-dots{
+  float: left;
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.report-pagination-top{
+  margin-bottom: 20px;
+}
+.filter-block option.active{
+  background: rgba(0, 136, 204, 0.2);
+}
+
+/* Настройки */
+.utm-tag-setting-table th{
+  font-size: 15px;
+}
+tr.utm-section{
+  font-weight: bold;
+  background: rgba(231, 231, 231, 0.4);
+}
+tr.utm-section td{
+  border-top: 2px solid #B3AEAE;
+  border-bottom: 2px solid #B3AEAE;
+}
+.utm-tag-setting-table tr.add-utm-section input, .utm-tag-setting-table tr.add-utm-section select{
+  width: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.utm-tag-setting-table tr.add-utm-section .show{
+  padding-top: 17px;
+}
+.utm-subsection input[type="checkbox"], .utm-section input[type="checkbox"]{
+  margin-left: 35px;
+  position: relative;
+  top: -2px;
+}
+.add-utm-section, .add-utm-section-buttons{
+  display: none;
+}
+.add-utm-section input[type="checkbox"]{
+  margin-left: 8px;
+  margin-top: 0px;
+}
+.add-utm-section tr.show{
+  padding-top: 12px;
+}
+#utm-tag-dynamic-add{
+  float: right;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 210px;
+}
+.utm-tag-setting-buttons{
+  width: 570px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.utm-tag-setting-buttons div{
+  margin-right: 10px;
+  width: 150px;
+}
+#connection span{
+  float: left;
+  width: 140px;
+}
+#connection input{
+  display: block;
+}
+#connection hr{
+  width: 400px;
+}
+#connection .connection-buttons{
+  margin-bottom: 30px;
+}
+.otherGoalsSettings td.active{
+  background: rgb(91,183,91);
+  border: 2px solid white;
+  cursor: pointer;
+}
+.otherGoalsSettings td.no-active{
+  background: rgb(189,54,47);
+  border: 2px solid white;
+  cursor: pointer;
+}
+.otherGoalsSettings td.active-new{
+  background: rgba(91,183,91,0.4);
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(91,183,91,0.6);  
+}
+.otherGoalsSettings td.no-active-new{
+  background: rgba(189, 54, 47, 0.3);
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(189,54,47, 0.6);
+}
+.otherGoalsSettingsButtons{
+  margin-top: 35px;
+}
+.otherGoalsSettingsSave{
+  width: 135px;
+}
+.otherGoalsSettingsDelete{
+  width: 135px;
+  margin-left: 5px;
+}
+.otherGoalsSettings .mark-td, .otherGoalsSettings .mark-th{
+  text-align: center;
+}
+.otherGoalsNewFields .btn-success{
+  width: 193px;
+}
+
+/* Добавление заказа вручную */
+.add-new-order-item{
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.add-new-order{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.add-product-fields{
+  margin-left: 40px;
+  margin-bottom: 25px;
+}
+.add-product-fields{
+  width: 194px;
+}
+.do-order{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 194px;
+}
