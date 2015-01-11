@@ -463,6 +463,9 @@ tr.utm-section td{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.add-new-order input.with-error{
+  border: 2px solid rgba(255, 0, 0, 0.7);
+}
 .add-new-order{
   margin-top: 30px;
   margin-bottom: 30px;

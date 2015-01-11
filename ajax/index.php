@@ -117,7 +117,7 @@ case 'set-basket-id':
         if ( ($utm_tag_name[0] == '(') && ($utm_tag_name[strlen($utm_tag_name)-1] == ')') )     // Обрезаем начальные и конечные скобки
             $utm_tag_name = substr($utm_tag_name, 1, strlen($utm_tag_name)-2);
 
-        $utm_tag_id = $section['SUBSECTION'][$utm_tag_name]['id'];    
+        $utm_tag_id = $section['SUBSECTION'][$utm_tag_name]['id'];   
         
         // Если совпадает с именем
         if($utm_tag_id){
@@ -145,10 +145,6 @@ case 'set-basket-id':
 
             // Если нету и в alt_name, то выводим добавляем в непроверенные
             else{
-               
-                echo json_encode($utmz_array);
-                return false;
-
                 // Добавляем неизвестные слова/фразы в отдельную таблицу
                 if( $utmz_array[$section['name']] && $name && $utmz_array[$name] != 'undefined') {
                     
@@ -320,29 +316,41 @@ case 'filter-apply':
         }
     }
 
-    if($_POST['price_from'] || $_POST['price_to']){
-        if($_POST['price_from'] && $_POST['price_to'])
-            $queryAdd .= " AND ( `price` >= ".$_POST['price_from']." AND `price` <= ".$_POST['price_to'].")";
-        elseif($_POST['price_from'])
-            $query_string .= " AND `price` >= ".$_POST['price_from'];
-        elseif ($_POST['price_to'])  
-            $queryAdd .= " AND `price` <= ".$_POST['price_to'];
-
-        array_push($utmArrQuery, $queryAdd);
-
-    }
-
     if($_POST['from'] || $_POST['to']){
         $from = strtotime( str_replace('.', '/', $_POST['from']) );
         $to = strtotime( str_replace('.', '/', $_POST['to']) ) + 86399;
+
+        if($queryAdd){
+            $queryAdd .= " AND ";
+        }
+
         if($_POST['from'] && $_POST['to'])
-            $queryAdd .= " AND ( `date` >= ".$from." AND `date` <= ".$to.")";
+            $queryAdd .= "( `date` >= ".$from." AND `date` <= ".$to.")";
         elseif($_POST['from'])
-            $query_string .= " AND `date` >= ".$to;
+            $queryAdd .= "`date` >= ".$to;
         elseif ($_POST['to'])  
-            $queryAdd .= " AND `date` <= ".$to;
+            $queryAdd .= "`date` <= ".$to;
 
         array_push($utmArrQuery, $queryAdd);
+    }
+
+    if($_POST['price_from'] || $_POST['price_to']){
+        $price_from = $_POST['price_from'];
+        $price_to = $_POST['price_to'];  
+
+        if($queryAdd){
+            $queryAdd .= " AND ";
+        }
+       
+        if($price_from && $price_to)
+            $queryAdd .= "( `price` >= ".$price_from." AND `price` <= ".$price_to.")";
+        elseif($price_from)
+            $queryAdd .= "`price` >= ".$price_from;
+        elseif ($price_to)  
+            $queryAdd .= "`price` <= ".$price_to;
+
+        array_push($utmArrQuery, $queryAdd);
+
     }
 
     $queryAdd = implode(' AND ', $utmArrQuery);

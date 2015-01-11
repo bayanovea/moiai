@@ -1,0 +1,9 @@
+.basket-img{
+	float: left;
+	margin-right: 10px;
+}
+#small_basket{
+	width: 190px;
+	float: right;
+	margin-top: 10px;
+}

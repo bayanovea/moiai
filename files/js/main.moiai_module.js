@@ -670,6 +670,7 @@ function add_constructor(){
           
     // Добавление новых товаров
     jQuery('.add-product-fields').click(function(){
+      $('.add-new-order input').removeClass('with-error');
       var new_order_item = jQuery('.add-new-order-item').first().html();
       jQuery( jQuery('.add-new-order-item').last() ).after('<div class="add-new-order-item">' + new_order_item + '</div>');
       jQuery('.add-new-order-item').last().find('.order-number').text( jQuery('.add-new-order-item').length );
@@ -711,6 +712,28 @@ function add_constructor(){
 
     // Добавление заказа
     jQuery('.do-order').click(function(){
+      $('.add-new-order input').removeClass('with-error');
+      var check = true;
+
+      $('.add-new-order-item').each(function(){
+        var require_input = Array('product_id', 'product_name', 'product_price', 'product_quantity');
+        for (var i = 0; i < require_input.length; i++) {
+          if( !$(this).find('input[name='+require_input[i]+']').val() ) {
+            $(this).find('input[name='+require_input[i]+']').addClass('with-error');
+            check = false;
+          }
+        };
+      });
+
+      if( !$('input[name=basket-id]').val() ) {
+         $('input[name=basket-id]').addClass('with-error');
+            check = false;
+      }
+
+      if(!check){
+        alert("Не все поля заполнены корректно");
+        return false;
+      }
 
       var goods = new Array();
       var i = 0;
@@ -739,7 +762,6 @@ function add_constructor(){
         dataType: 'json',
         cache: false,
         success: function(data) {
-          console.log(data);
           if(data == "true"){
             alert("Заказ удачно добавлен");
             location.reload();
